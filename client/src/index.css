@@ -1,0 +1,742 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e2f;
+  padding: 12px 24px;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-logo {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.navbar-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-title:hover {
+  color: #00c6ff;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00c6ff;
+}
+
+.user-welcome {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-right: 8px;
+}
+
+.logout-btn {
+  background-color: #ff5e5e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #e64848;
+}
+
+
+/* Auth Forms */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+}
+
+.error-message {
+  background-color: #fce4e4;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+/* Dashboard */
+.dashboard-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.new-doc-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.new-doc-btn:hover {
+  background-color: #2980b9;
+}
+
+.documents-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.document-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.document-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.document-card h3 {
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+.document-card p {
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.open-doc-btn {
+  display: inline-block;
+  background-color: #2ecc71;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.open-doc-btn:hover {
+  background-color: #27ae60;
+}
+
+.no-documents {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-documents button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Editor */
+.editor-container {
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.document-title {
+  font-size: 1.25rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.document-title:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #3498db;
+  outline: none;
+}
+
+.code-editor {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Additional styles for collaborative features */
+/* Add these to your index.css file */
+
+/* Editor Layout */
+.editor-workspace {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+.editor-content {
+  flex: 3;
+  overflow-y: auto;
+}
+
+/* Collaboration Panel */
+.collaboration-panel {
+  width: 220px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.collaboration-panel h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #3a506b;
+}
+
+.active-users-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.user-item:hover {
+  background-color: #34495e;
+}
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.username {
+  font-size: 0.9rem;
+}
+
+.you-indicator {
+  font-size: 0.7rem;
+  color: #bdc3c7;
+  margin-left: 0.3rem;
+}
+
+/* Enhanced Code Review Panel */
+.code-review-panel {
+  width: 350px;
+  background-color: #f5f7fa;
+  border-left: 1px solid #ddd;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.quality-score {
+  display: flex;
+  align-items: center;
+}
+
+.score-label {
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  color: #7f8c8d;
+}
+
+.score-value {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.score-value.high {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.score-value.medium {
+  background-color: #f39c12;
+  color: white;
+}
+
+.score-value.low {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.code-summary {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.code-summary h4 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.code-summary p {
+  font-size: 0.85rem;
+  color: #34495e;
+  line-height: 1.5;
+}
+
+.suggestion-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  opacity: 0.9;
+}
+
+.filter-btn.active {
+  color: white;
+  font-weight: 500;
+}
+
+.filter-btn.all.active {
+  background-color: #3498db;
+}
+
+.filter-btn.bug.active {
+  background-color: #e74c3c;
+}
+
+.filter-btn.security.active {
+  background-color: #f39c12;
+}
+
+.filter-btn.style.active {
+  background-color: #9b59b6;
+}
+
+.suggestion-item {
+  background-color: white;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.suggestion-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.suggestion-type {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.suggestion-location {
+  font-size: 0.75rem;
+  color: #7f8c8d;
+}
+
+.suggestion-message {
+  font-size: 0.85rem;
+  color: #2c3e50;
+}
+
+.suggestion-item.expanded {
+  border-left: 3px solid #3498db;
+}
+
+.suggestion-detail {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.explanation h5, .suggested-fix h5 {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  color: #7f8c8d;
+}
+
+.explanation p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #34495e;
+}
+
+.suggested-fix pre {
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  overflow-x: auto;
+  margin-bottom: 0.5rem;
+}
+
+.apply-fix-btn {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.apply-fix-btn:hover {
+  background-color: #27ae60;
+}
+
+.no-suggestions {
+  padding: 1rem;
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Type-specific styling */
+.suggestion-item.bug .suggestion-type {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.suggestion-item.security .suggestion-type {
+  background-color: #f39c12;
+  color: white;
+}
+
+.suggestion-item.style .suggestion-type {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.suggestion-item.performance .suggestion-type {
+  background-color: #3498db;
+  color: white;
+}
+
+.suggestion-item.warning .suggestion-type {
+  background-color: #f39c12;
+  color: white;
+}
+
+.suggestion-item.info .suggestion-type {
+  background-color: #2ecc71;
+  color: white;
+}
+
+/* Enhanced editor controls */
+.editor-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.review-btn {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+}
+
+.review-btn:hover {
+  background-color: #8e44ad;
+}
+
+.review-btn:disabled {
+  background-color: #d2b4de;
+  cursor: not-allowed;
+}
+
+/* Remote cursor styles */
+.remote-cursor {
+  position: absolute;
+  width: 2px;
+  background-color: #3498db;
+  height: 18px;
+  z-index: 3;
+}
+
+.remote-cursor::after {
+  content: attr(data-user);
+  position: absolute;
+  top: -18px;
+  left: 0;
+  font-size: 12px;
+  background-color: #3498db;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.remote-selection {
+  background-color: rgba(52, 152, 219, 0.2);
+}
+
+/* Loading and Error States */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.25rem;
+  color: #7f8c8d;
+}
+
+/* Editor Code Review */
+.editor-content {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+.code-editor {
+  flex: 3;
+  overflow-y: auto;
+}
+
+.code-review-panel {
+  flex: 1;
+  background-color: #f8f9fa;
+  border-left: 1px solid #ddd;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.code-review-panel h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.suggestion-list {
+  list-style: none;
+}
+
+.suggestion-item {
+  background-color: white;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-type {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.suggestion-item.style .suggestion-type {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.suggestion-item.warning .suggestion-type {
+  background-color: #f39c12;
+  color: white;
+}
+
+.suggestion-item.debug .suggestion-type {
+  background-color: #3498db;
+  color: white;
+}
+
+.suggestion-item.unused .suggestion-type {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.suggestion-item.info .suggestion-type {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.review-btn {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.review-btn:hover {
+  background-color: #8e44ad;
+}
+
+.review-btn:disabled {
+  background-color: #d2b4de;
+  cursor: not-allowed;
+}
