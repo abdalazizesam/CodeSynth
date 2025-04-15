@@ -25,9 +25,6 @@ This project aims to streamline developer collaboration while enhancing code qua
 ## Development Status
 🚧 Currently in active development 🚧
 
-## Getting Started
-See the [documentation](./docs/getting-started.md) for installation and setup instructions.
-
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
